@@ -20,6 +20,9 @@ import { ClickOutside as vClickOutside } from 'element-plus'
 const buttonRef = ref()
 const popoverRef = ref()
 const onClickOutside = () => {
+  console.log(unref(popoverRef))
+  console.log(unref(popoverRef).popperRef)
+  console.log(unref(popoverRef).popperRef?.delayHide)
   unref(popoverRef).popperRef?.delayHide?.()
 }
 </script>
